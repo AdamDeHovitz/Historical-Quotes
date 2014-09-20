@@ -9,7 +9,15 @@ adjective = None
 
 @app.route("/")
 def start():
-    return render_template("adamspg.html")
+    global name
+    global quote 
+    global adjective
+
+    name = None
+    quote = None
+    adjective = None
+    
+    return render_template("index.html")
 
 @app.route("/results", methods = ["POST", "GET"])
 def main():
@@ -24,6 +32,9 @@ def main():
     if adjective == None:
         adjective = request.form["adjective"]
 
+    print name
+    print quote
+    print adjective
     s = '''<!doctype html>
         <html>
         <head>
@@ -46,7 +57,7 @@ def main():
     variableName = get_it.read()
     lines= variableName.split('\n')
     lines=lines[:len(lines)-1]
-    if quote!='I said nothing':
+    if quote!="":
         lines.append(quote)
         lines.append(quote)
         
@@ -56,7 +67,7 @@ def main():
     Dict=filez.read()
     Dict=Dict.split('\n')
     Dict=Dict[:len(Dict)-1]
-    if name!='I do not know':
+    if name!="":
         Dict.append(name+',https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ4qlCVQrMo5QqT5-y_pEcycr-HEap5aOoWAHsHtEa3_qJAFxKZA')
         Dict.append(name+',https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ4qlCVQrMo5QqT5-y_pEcycr-HEap5aOoWAHsHtEa3_qJAFxKZA')
     
@@ -69,7 +80,7 @@ def main():
     titles=filezd.read()
     titles=titles.split('\n')
     titles=titles[:len(titles)-2]
-    if adjective!='indescribable':
+    if adjective!="":
         titles.append(adjective)
         titles.append(adjective)
     s+= '<center><img src='+'"'+image+'"'+'width="400" height="400"></img></center><br>'
@@ -77,18 +88,20 @@ def main():
     s+= '"'+lines[random.randint(0, len(lines)-1)]+'"'
     s+= '''<br><br> 
    <a class="pure-button pure-button-primary" href="/results">Next Quote</a>
+   <br> <br>
+   <a class="pure-button pure-button-primary" href="/">Return to Home Page</a>
    
 '''
 
-    s+= '''<br><br><br> <b> TEST </b> <br> <br>'''
-    for allImage in Dict:
+#s+= '''<br><br><br> <b> TEST </b> <br> <br>'''
+    #for allImage in Dict:
         
-        allImage=allImage.split(',')
+        #allImage=allImage.split(',')
 
-        Name=allImage[0]
-        image=allImage[1]
-        s+='''<br><br> ''' + Name + "<br><br>"
-        s+= '<center><img class="pure-img" src='+'"'+image+'"'+'width="400" height="400"></img></center><br>'
+        #Name=allImage[0]
+        #image=allImage[1]
+        #s+='<br><br> ' + Name + "<br><br>"
+        #s+= '<center><img class="pure-img" src='+'"'+image+'"'+'width="400" height="400"></img></center><br>'
     
     s+= '<br><br><br> <font size="1.5"> <b>*historical accuracy may<br> not be guaranteed'
     filez.close()
