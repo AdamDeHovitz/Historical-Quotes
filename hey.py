@@ -16,21 +16,21 @@ def main():
     global name
     global quote 
     global adjective
+
     if name == None:
-        name = request.form["name"]
+       name = request.form["name"]
     if quote == None:
         quote = request.form["quote"]
     if adjective == None:
         adjective = request.form["adjective"]
-        #print name
-   
+
     s = '''<!doctype html>
         <html>
         <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Your page title</title>
+        <title>Wisdom!</title>
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 </head>
@@ -39,7 +39,7 @@ def main():
         <body style="background-color:#E68081">
         '''
 
-    s+= '<h3 class="brand-title"><center><b>Wise words from figures of great stature </b></h3>'
+    s+= '<h3 class="brand-title"><center><b>Wise words from a figure of great stature </b></h3>'
 
     #s+= "<center>and now for your pleasure a quote: <br><br>"
     get_it = open('quotes.txt', 'r')
@@ -76,7 +76,7 @@ def main():
     s+= '<center>As the '+ titles[random.randint(0, len(titles)-1)]+' <b>'+Name+'</b> once said:<br>'
     s+= '"'+lines[random.randint(0, len(lines)-1)]+'"'
     s+= '''<br><br> 
-   <a class="pure-button pure-button-primary" href="/results">A Primary Button</a>
+   <a class="pure-button pure-button-primary" href="/results">Next Quote</a>
    
 '''
 

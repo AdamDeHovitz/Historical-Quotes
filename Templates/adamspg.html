@@ -1,6 +1,6 @@
 <html>
 <!doctype html>
-        <html>
+<html>
         <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,27 @@
 </head>
 
 <body style="background-color:#E68081">
-<form method="POST" action="/results">
-<h1><center> Greetings weary traveller</h1>
+<form class="pure-form pure-form-aligned" method="POST" action="/results">
+<h1><center> Greetings Weary Traveller</center></h1>
 <br>
-<center>What did they name you?<br>
-<input type="text" name="name" size="20" value="I do not know">
+<center>
+<div class="pure-control-group">
+  <label for="name">What did they name you?</label>
+  <input type="text" name="name" size="20" value="I do not know">
+</div>
+
+
+<div class="pure-control-group">
+  <label for="quote">What did you tell them?</label>
+  <input type="text" name="quote" size="20" value="I said nothing">
+</div>
+<div class="pure-control-group">
+  <label for="adjective">How did they describe you?</label>
+  <input type="text" name="adjective" size="20" value="indescribable">
+</div>
 <br>
-<br>
-What did you tell them?<br>
-<input type="text" name="quote" size="23" value="I said nothing">
-<br>
-<br>
-How did they describe you?<br>
-<input type="text" name="adjective" size="26" value="indescribable">
-<br>
-<br>
-<input type="submit" name="Submit" value="Show that you have not wasted my precious time.">
+<a class="pure-button pure-button-primary" href="/results"> Wise Quotes Ahead!</a>
 </center>
-<br>
 </form>
 </body>
 </html>
