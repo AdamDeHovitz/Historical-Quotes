@@ -42,12 +42,26 @@ def main():
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Wisdom!</title>
-
+        <style>
+    body {
+        background: white }
+    section {
+    
+    background: black;
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px
+    }
+  </style>
+    
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 </head>
 
 
-        <body style="background-color:#E68081">
+        <body style="background-color:white">
         '''
 
     s+= '<h3 class="brand-title"><center><b>Wise words from a figure of great stature </b></h3>'
@@ -83,10 +97,10 @@ def main():
     if adjective!="":
         titles.append(adjective)
         titles.append(adjective)
-    s+= '<center><img src='+'"'+image+'"'+'width="400" height="400"></img></center><br>'
-    s+= '<center>As the '+ titles[random.randint(0, len(titles)-1)]+' <b>'+Name+'</b> once said:<br>'
+    s+= '<center><img src='+'"'+image+'"'+'width="400" height="400"></img></center>'
+    s+= '<section><center>As the '+ titles[random.randint(0, len(titles)-1)]+' <b>'+Name+'</b> once said:<br>'
     s+= '"'+lines[random.randint(0, len(lines)-1)]+'"'
-    s+= '''<br><br> 
+    s+= '''</section><center><br>
    <a class="pure-button pure-button-primary" href="/results">Next Quote</a>
    <br> <br>
    <a class="pure-button" href="/">Return to Home Page</a>
