@@ -47,14 +47,21 @@ def main():
         background: white }
     section {
     
-    background: black;
-        color: white;
         border-radius: 1em;
         padding: 1em;
         margin-left: auto;
         margin-right: auto;
         width: 400px
     }
+    .c {
+        background: grey;
+        color: black;
+        }
+    .a   {
+     background: black;
+        color: white;
+        } 
+    
   </style>
     
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
@@ -97,8 +104,8 @@ def main():
     if adjective!="":
         titles.append(adjective)
         titles.append(adjective)
-    s+= '<center><img src='+'"'+image+'"'+'width="400" height="400"></img></center>'
-    s+= '<section><center>As the '+ titles[random.randint(0, len(titles)-1)]+' <b>'+Name+'</b> once said:<br>'
+    s+= '<center><section class ="a"><img src='+'"'+image+'"'+'width="400" height="400"></img></center></section>'
+    s+= '<section class ="c"><center>As the '+ titles[random.randint(0, len(titles)-1)]+' <b>'+Name+'</b> once said:<br>'
     s+= '"'+lines[random.randint(0, len(lines)-1)]+'"'
     s+= '''</section><center><br>
    <a class="pure-button pure-button-primary" href="/results">Next Quote</a>
