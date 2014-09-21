@@ -44,3 +44,5 @@ Emperor Hirohito,http://www.owensvalleyhistory.com/manzanar3/emperor_hirohito.gi
 St. Augustine,http://catholicexchange.com/wp-content/uploads/2012/08/St.-Augustine-with-Book1.jpg
 Queen Elizabeth II,http://www.dailytimes.com.ng/sites/default/files/imagecache/400xY/Queen-Elizabeth-II-9286165-2-402_0.jpg
 Bashar Al Assad,http://static.dnaindia.com/sites/default/files/2014/04/09/226208-asad.jpg
+Fidel Castro,http://www.bongocelebrity.com/wp-content/uploads/2011/08/Fidel-Castro.jpg
+Che Guevara,http://images.easyart.com/i/prints/rw/lg/3/3/Anonymous-Che-Guevara--Red--331461.jpg
