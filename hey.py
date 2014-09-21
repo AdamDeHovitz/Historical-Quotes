@@ -89,7 +89,7 @@ def main():
     s+= '''<br><br> 
    <a class="pure-button pure-button-primary" href="/results">Next Quote</a>
    <br> <br>
-   <a class="pure-button pure-button-primary" href="/">Return to Home Page</a>
+   <a class="pure-button" href="/">Return to Home Page</a>
    
 '''
 
